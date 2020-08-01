@@ -1,4 +1,9 @@
 package Service;
+
+import ServiceTools.*;
+
+import java.util.ArrayList;
+
 /**
  * This class represents the waiter who services the restaurant. They will be handling requests made by customers and updated on
  * requests straight from the kitchen/console.

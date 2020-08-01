@@ -1,4 +1,6 @@
 package Service;
+import ServiceTools.*;
+import java.util.ArrayList;
 /**
  * Class to represent a kitchen or bar where the waiter makes orders or requests from.
  */
