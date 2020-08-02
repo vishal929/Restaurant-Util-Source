@@ -1,5 +1,6 @@
 package ServiceTools;
 
+import java.awt.*;
 import java.util.HashMap;
 
 /**
@@ -22,6 +23,12 @@ public class MenuItem{
      */
     private String description;
 
+
+    /**
+     * Each MenuItem has an image.
+     */
+    private Image picture;
+
     /**
      * Constructor for the menuItem. Initializes description to null and prices to an empty hashmap.
       * @param name This is the name of the item to add to the menu as a MenuItem.
@@ -31,6 +38,11 @@ public class MenuItem{
         prices=new HashMap<String,Double>();
         description=null;
     }
+
+
+
+
+    //getters and setters
 
     public String getName() {
         return name;
@@ -54,5 +66,14 @@ public class MenuItem{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    public Image getPicture() {
+        return picture;
+    }
+
+    public void setPicture(Image picture) {
+        this.picture = picture;
     }
 }

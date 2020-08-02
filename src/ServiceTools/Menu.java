@@ -15,9 +15,30 @@ public class Menu{
      */
     private HashMap<String, ArrayList<MenuItem>> menu;
 
+    /**
+     * Initializing an empty menu.
+     */
     public Menu(){
        menu=new HashMap<String, ArrayList<MenuItem>>();
     }
+
+    public boolean addItem(){
+        //compilation
+        return true;
+    }
+
+    public boolean removeCategory(){
+        //compilation
+        return true;
+    }
+
+    public boolean removeItem(){
+       //compilation
+        return true;
+    }
+
+
+    // getters and setters
 
     public HashMap<String, ArrayList<MenuItem>> getMenu() {
         return menu;

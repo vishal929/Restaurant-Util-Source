@@ -26,9 +26,14 @@ public class Console{
     private ArrayList<Order> orders;
 
     /**
-     * Orders that have been fulfilled (served) in the operating area of this console.
+     * Orders that have been fulfilled (ready to be picked up from kitchen/bar) in the operating area of this console.
      */
     private  ArrayList<Order> fulfilledOrders;
+
+    /**
+     * Orders that have been served by a waiter in the operating area of this console.
+     */
+    private ArrayList<Order> servedOrders;
 
     /**
      * Complaints given about orders.
@@ -52,6 +57,10 @@ public class Console{
         fulfilledOrders=new ArrayList<Order>();
         complaints = new ArrayList<Complaint>();
     }
+
+
+
+    //getters and setters
 
     public String getName() {
         return name;
@@ -99,5 +108,13 @@ public class Console{
 
     public void setConsoles(ArrayList<Console> consoles) {
         this.consoles = consoles;
+    }
+
+    public ArrayList<Order> getServedOrders() {
+        return servedOrders;
+    }
+
+    public void setServedOrders(ArrayList<Order> servedOrders) {
+        this.servedOrders = servedOrders;
     }
 }

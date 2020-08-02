@@ -31,9 +31,14 @@ public class Order{
     private LocalDateTime issued;
 
     /**
-     * Each order has a time when it is fulfilled (served).
+     * Each order has a time when it is fulfilled (ready to be picked up from the kitchen/bar).
      */
     private LocalDateTime fulfilled;
+
+    /**
+     * Each order has a time when it is served.
+     */
+    private LocalDateTime served;
 
     /**
      * Constructing our order. The time is initialized when the order is created.
@@ -51,7 +56,18 @@ public class Order{
        issued= LocalDateTime.now();
     }
 
+    /**
+     * Method to return a complaint from this order. The order and complaint both exist separately because the complaint can be resolved and the order can still be filled.
+     * @param description This is the nature of the complaint.
+     * @return Returns the created complaint.
+     */
+    public Complaint makeComplaint(String description){
+       return new Complaint(this,description);
+    }
 
+
+
+    // getters and setters
     public Waiter getWaiter() {
         return waiter;
     }
@@ -90,5 +106,13 @@ public class Order{
 
     public void setFulfilled(LocalDateTime fulfilled) {
         this.fulfilled = fulfilled;
+    }
+
+    public LocalDateTime getServed() {
+        return served;
+    }
+
+    public void setServed(LocalDateTime served) {
+        this.served = served;
     }
 }

@@ -21,6 +21,11 @@ public class Complaint{
     private Order complainedOrder;
 
     /**
+     * Each complaint has a resolve time (in the case that the complaint is resolved)
+     */
+    private LocalDateTime resolvedTime;
+
+    /**
      * Initializing our order with time of initialization.
      * @param o This is the order associated with our complaint
      * @param complaint This is the complaint logged with the order.
@@ -29,5 +34,42 @@ public class Complaint{
         complainedOrder=o;
         complaintTime=LocalDateTime.now();
         issue=complaint;
+    }
+
+
+
+
+    //getters and setters
+
+    public String getIssue() {
+        return issue;
+    }
+
+    public void setIssue(String issue) {
+        this.issue = issue;
+    }
+
+    public LocalDateTime getComplaintTime() {
+        return complaintTime;
+    }
+
+    public void setComplaintTime(LocalDateTime complaintTime) {
+        this.complaintTime = complaintTime;
+    }
+
+    public Order getComplainedOrder() {
+        return complainedOrder;
+    }
+
+    public void setComplainedOrder(Order complainedOrder) {
+        this.complainedOrder = complainedOrder;
+    }
+
+    public LocalDateTime getResolvedTime() {
+        return resolvedTime;
+    }
+
+    public void setResolvedTime(LocalDateTime resolvedTime) {
+        this.resolvedTime = resolvedTime;
     }
 }
